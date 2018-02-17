@@ -10,7 +10,7 @@ public class Isomorphic {
        
         Map<Character, Integer> m1 = new HashMap<>();
         Map<Character, Integer> m2 = new HashMap<>();
-    
+        
         for(Integer i = 0; i < s1.length(); i++) {
             
             System.out.println(s1.charAt(i));
