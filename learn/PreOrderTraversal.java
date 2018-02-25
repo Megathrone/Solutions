@@ -14,6 +14,8 @@ import javax.swing.tree.TreeNode;
  * 
  * @Megathrone
  * two solutions, the first one is recursion and the second is iteration.
+ * 两种解法，一种是递归的比较简单，另一种是stack，首先吧root压入栈，然后弹出判空压入值，之后因为
+ * stack的pop顺序问题先压root的right再left
  */
 public class PreOrderTraversal {
     /** Recursion
