@@ -18,8 +18,9 @@ public class Selection {
             for (int k = i + 1; k < N; k++) {
                 if (less(a[k], a[min]))
                     min = k;
-                exch(a, i, min);
+                
             }
+            exch(a, i, min);
         }
     }
 
