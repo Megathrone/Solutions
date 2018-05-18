@@ -9,7 +9,10 @@ public class ST<Key,Value> {
     }
 
     void put(Key key, Value value){
-
+        if(value == null) {
+            delete(key);
+            return;
+        }
     }
 
     Value get(Key key){
@@ -17,15 +20,15 @@ public class ST<Key,Value> {
     }
 
     void delete(Key key){
-
+        put(key, null);
     }
 
     boolean contains(Key key){
-
+        return get(key) != null;
     }
 
     boolean isEmpty(){
-
+        return size() == 0;
     }
 
     int size(){
@@ -33,7 +36,7 @@ public class ST<Key,Value> {
     }
 
     Iterable<Key> keys(){
-        
+
     }
     
 }
