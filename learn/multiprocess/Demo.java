@@ -12,7 +12,7 @@ public class Demo {
            
             previousThread = curThread;
         }
-        System.out.println("Main here");
+    
     }
 
     static class JoinThread extends Thread {
