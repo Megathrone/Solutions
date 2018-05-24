@@ -24,7 +24,7 @@ public class Isomorphic {
     
 
     public static void main(String[] args) {
-        System.out.println(isIsomorphic("abb", "egg"));
+        System.out.println(isIsomorphic("title", "pappr"));
         Map<Character, Integer> m1 = new HashMap<>();
         Map<Character, Integer> m2 = new HashMap<>();
         m1.put('a',1);
