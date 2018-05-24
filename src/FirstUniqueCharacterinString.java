@@ -1,8 +1,10 @@
-import java.util.*;
+/**
+ * FirstUniqueCharacterinString
+ */
+public class FirstUniqueCharacterinString {
 
-public class Test {
     public int firstUniqChar(String s) {
-        Map<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> map = new LinkedHashMap<>();
 
         for (char word : s.toCharArray()) {
 
@@ -19,12 +21,5 @@ public class Test {
                 return s.indexOf(word);
         }
         return -1;
-    }
-
-    public static void main(String[] args) {
-        String s = "loveleetcode";
-        Test foo = new Test();
-        System.out.println(foo.firstUniqChar(s));
-
     }
 }
