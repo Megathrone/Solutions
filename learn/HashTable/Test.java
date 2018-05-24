@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Test {
     public int firstUniqChar(String s) {
-        Map<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> map = new LinkedHashMap<>();
 
         for (char word : s.toCharArray()) {
 
@@ -10,10 +10,11 @@ public class Test {
 
                 map.put(word, map.get(word) + 1);
 
-            } else {
+            } else {{}
                 map.put(word, 1);
             }
         }
+        System.out.println(map);
         for (char word : map.keySet()) {
             if (map.get(word) == 1)
                 return s.indexOf(word);
