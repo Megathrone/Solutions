@@ -4,7 +4,7 @@
  * 然后呢根绝题目的要求对字符串进行构造注意要把根节点放在最前面e
  */
 
-public class className {
+public class ConstructStringfromBinaryTree {
     public String tree2str(TreeNode t) {
         if (null == t)
             return "";
