@@ -20,6 +20,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, value> {
     }
 
     public int size() {
+    
         return size(root);
     }
 
