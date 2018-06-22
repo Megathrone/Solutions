@@ -23,7 +23,7 @@ public class AddBinary {
         }
         if (carry != 0)
             sb.append(carry);
-
+            
         return sb.reverse().toString();
     }
 
