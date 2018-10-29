@@ -34,7 +34,7 @@ public class ToHex {
     }
 
     public static void main(String[] argv){
-        System.out.println((new ToHex()).toEi(32));
+        System.out.println((new ToHex()).toHex(32));
         //System.out.println((37 & 15));
     }
 }
