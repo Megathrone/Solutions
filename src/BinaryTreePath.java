@@ -4,10 +4,8 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * 
- * @author:Megathrone
- * BinaryTreePath
- * 
+ * @author:Megathrone BinaryTreePath
+ *
  * 用了一个BFS的方法
  */
 public class BinaryTreePath {
@@ -16,9 +14,10 @@ public class BinaryTreePath {
         List<String> res = new ArrayList<>();
         Queue<TreeNode> qNode = new LinkedList<>();
         Queue<String> qStr = new LinkedList<>();
-        
-        if (root == null)
+
+        if (root == null) {
             return res;
+        }
 
         qNode.offer(root);
         qStr.offer("");
@@ -27,8 +26,9 @@ public class BinaryTreePath {
             TreeNode curNode = qNode.poll();
             String curStr = qStr.poll();
 
-            if (curNode.left == null && curNode.right == null)
+            if (curNode.left == null && curNode.right == null) {
                 res.add(curStr + curNode.val);
+            }
 
             if (curNode.left != null) {
                 qNode.offer(curNode.left);

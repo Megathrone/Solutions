@@ -1,24 +1,23 @@
 /**
- * @author:Megathrone
- * Shell
- * 
- * 插入排序是当h=1时的希尔排序
- * h的划分是3h+1
- * 
+ * @author:Megathrone Shell
+ *
+ * 插入排序是当h=1时的希尔排序 h的划分是3h+1
  */
 public class Shell {
 
     public static void sort(Comparable[] a) {
         int N = a.length;
         int h = 1;
-        while (h < N / 3)
+        while (h < N / 3) {
             h = 3 * h + 1;
+        }
         while (h >= 1) {
             for (int i = h; i < N; i++) {
-                for (int j = i; j >= h && less(a[j], a[j - h]); j -= h)
+                for (int j = i; j >= h && less(a[j], a[j - h]); j -= h) {
                     exch(a, j, j - h);
+                }
             }
-            h=h/3;
+            h = h / 3;
         }
     }
 
@@ -34,14 +33,15 @@ public class Shell {
 
     public static boolean isSorted(Comparable[] a) {
         for (int i = 1; i < a.length; i++) {
-            if (less(a[i], a[i - 1]))
+            if (less(a[i], a[i - 1])) {
                 return false;
+            }
         }
         return true;
     }
 
     public static void main(String[] args) {
-        Comparable[] a = { 4, 5, 6, 1, 2, 4, 5, 7, 1, 13, 4 };
+        Comparable[] a = {4, 5, 6, 1, 2, 4, 5, 7, 1, 13, 4};
         sort(a);
         System.out.println(isSorted(a));
     }

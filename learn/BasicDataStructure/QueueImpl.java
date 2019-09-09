@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class QueueImpl {
+
     // Store elements
     // Using dynamic array and an index pointing to the head of queue
     private List<Integer> data;
@@ -39,7 +40,6 @@ class QueueImpl {
     public boolean isEmpty() {
         return p_start >= data.size();
     }
-
 
 
     public static void main(String[] args) {

@@ -17,8 +17,9 @@ public class FirstUniqueCharacterinString {
             }
         }
         for (char word : map.keySet()) {
-            if (map.get(word) == 1)
+            if (map.get(word) == 1) {
                 return s.indexOf(word);
+            }
         }
         return -1;
     }

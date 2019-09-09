@@ -9,8 +9,9 @@ public class PerfectSquare {
 
     public int numSquares(int n) {
 
-        if (n <= 0)
+        if (n <= 0) {
             return 0;
+        }
         HashSet<Integer> visited = new HashSet<>();
         Queue<Integer> queue = new LinkedList<>();
         int res = 0;
@@ -22,8 +23,9 @@ public class PerfectSquare {
 
             for (int i = 0; i < size; i++) {
                 int code = queue.poll();
-                if (visited.contains(code))
+                if (visited.contains(code)) {
                     continue;
+                }
                 for (int k = 1; k <= Math.sqrt(code); k++) {
 
                     int diff = code - k * k;

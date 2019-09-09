@@ -10,8 +10,8 @@ public class DistributeCandies {
         for (int candy : candies) {
             set.add(candy);
         }
-    
+
         return set.size() > candies.length / 2 ? candies.length / 2 : set.size();
     }
-        
+
 }

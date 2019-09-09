@@ -3,13 +3,14 @@
  * licenseKF
  */
 public class licenseKF {
-    public String licenseKeyFormatting(String s, int k){
+
+    public String licenseKeyFormatting(String s, int k) {
         StringBuilder sb = new StringBuilder(s.toUpperCase().replaceAll("-", ""));
         System.out.println(sb.toString());
-        for(int i = sb.length()-k;i>0;i-=k){
+        for (int i = sb.length() - k; i > 0; i -= k) {
             sb.insert(i, "-");
         }
-        
+
         return sb.toString();
     }
 
@@ -18,5 +19,5 @@ public class licenseKF {
         String a = foo.licenseKeyFormatting("2-5g-3-J", 2);
         System.out.print(a);
     }
-    
+
 }

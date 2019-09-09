@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * HashMapUsage
  */
@@ -23,9 +24,9 @@ public class HashMapUsage {
             System.out.println("Key 2 is not in the hash map.");
         }
         // 7. get the size of the hash map
-        System.out.println("The size of hash map is: " + hashmap.size()); 
+        System.out.println("The size of hash map is: " + hashmap.size());
         // 8. iterate the hash map
-        
+
         for (Map.Entry<Integer, Integer> entry : hashmap.entrySet()) {
             System.out.print("(" + entry.getKey() + "," + entry.getValue() + ") ");
         }

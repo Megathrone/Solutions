@@ -1,6 +1,6 @@
 /**
  * maxSubarray
- * 
+ *
  * 动态规划
  */
 public class maxSubarray {
@@ -14,7 +14,7 @@ public class maxSubarray {
             if (seqNum > maxNum) {
                 maxNum = seqNum;
             }
-            if (seqNum < 0){
+            if (seqNum < 0) {
                 seqNum = 0;
             }
         }

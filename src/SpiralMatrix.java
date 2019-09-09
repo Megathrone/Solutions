@@ -1,15 +1,14 @@
 import java.util.*;
 
 /**
- * SpiralMatrix
- * 这个题是螺旋遍历二维数组，核心的思想是 “削” 的思想
- * 削去最外面一圈，主要问题在于如何判断边界值
+ * SpiralMatrix 这个题是螺旋遍历二维数组，核心的思想是 “削” 的思想 削去最外面一圈，主要问题在于如何判断边界值
  */
 public class SpiralMatrix {
 
     public List<Integer> spiralOrder(int[][] matrix) {
-        if (matrix.length == 0 || matrix == null)
+        if (matrix.length == 0 || matrix == null) {
             return new ArrayList<Integer>();
+        }
 
         List<Integer> res = new ArrayList<>();
         int rowBegin = 0;
@@ -51,7 +50,7 @@ public class SpiralMatrix {
     }
 
     public static void main(String[] args) {
-        int[][] matrix = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
+        int[][] matrix = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
         SpiralMatrix foo = new SpiralMatrix();
         System.out.println(foo.spiralOrder(matrix));
     }

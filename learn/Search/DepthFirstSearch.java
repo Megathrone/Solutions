@@ -29,11 +29,13 @@ public class DepthFirstSearch {
     }
 
     public Iterable<Integer> pathTo(int v) {
-        if (!hasPathTo(v))
+        if (!hasPathTo(v)) {
             return null;
+        }
         Stack<Integer> path = new Stack<Integer>();
-        for (int x = v; x != s; x = edgeTo[x])
+        for (int x = v; x != s; x = edgeTo[x]) {
             path.push(x);
+        }
         path.push(s);
         return path;
     }

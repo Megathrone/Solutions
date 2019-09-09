@@ -3,13 +3,13 @@ import java.util.Hashtable;
 import java.util.Set;
 
 /**
- *
- *
  * 用Hashset,因为不能重复加入相同的值,所以将nums1全部加入set,然后遍历nums2如果nums1中有的话加入输出数组
+ *
  * @NogizakaZ
  */
 public class IntersectionOfArrays {
-    public int[] intersection ( int[] nums1, int[] nums2 ) {
+
+    public int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> set = new HashSet<>();
         Set<Integer> intersect = new HashSet<>();
         for (int i = 0; i < nums1.length; i++) {

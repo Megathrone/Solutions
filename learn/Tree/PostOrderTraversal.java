@@ -31,10 +31,12 @@ public class PostOrderTraversal {
         while (!s.isEmpty()) {
             TreeNode curr = s.pop();
             res.addFirst(curr.val);
-            if (curr.left != null)
+            if (curr.left != null) {
                 s.push(curr.left);
-            if (curr.right != null)
+            }
+            if (curr.right != null) {
                 s.push(curr.right);
+            }
         }
         return res;
 

@@ -7,18 +7,19 @@ public class BinarySearch {
         int high = array.length - 1;
         while (low <= high) {
             int mid = low + (high - low) / 2;
-            if (key < array[mid])
+            if (key < array[mid]) {
                 high = mid - 1;
-            else if (key > array[mid])
+            } else if (key > array[mid]) {
                 low = mid + 1;
-            else
+            } else {
                 return mid;
+            }
         }
         return -1;
     }
 
     public static void main(String[] args) {
-        int[] array = { 23, 45, 23, 56, 112, 45, 2, 34, 14, 23, 67, 565, 12344, 123, 235 };
+        int[] array = {23, 45, 23, 56, 112, 45, 2, 34, 14, 23, 67, 565, 12344, 123, 235};
         int key = 112;
         Arrays.sort(array);
         System.out.println(Arrays.toString(array));

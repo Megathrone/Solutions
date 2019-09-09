@@ -4,11 +4,11 @@ import javax.swing.tree.TreeNode;
 
 /**
  * SecondMinimum
- * 
- * 一个心得，真的要仔细看题目说明啊，题目说了根节点的值小于两个子节点的值，也就是说每一次的root都是最小的，
- * 那么就很简单了，BFS秒了，当然也可以DFS
+ *
+ * 一个心得，真的要仔细看题目说明啊，题目说了根节点的值小于两个子节点的值，也就是说每一次的root都是最小的， 那么就很简单了，BFS秒了，当然也可以DFS
  */
 public class SecondMinimum {
+
     //bfs
     /*
     public int findSecondMinimumValue(TreeNode root) {
@@ -35,18 +35,24 @@ public class SecondMinimum {
     int minVal;
     int secondMin = Integer.MAX_VALUE;
 
-    public int findSecondMinimumValue(TreeNode root){
-        if(root == null ) return -1;
+    public int findSecondMinimumValue(TreeNode root) {
+        if (root == null) {
+            return -1;
+        }
         minVal = root.val;
         dfs(root);
-        return secondMin == Integer.MAX_VALUE?-1:secondMin;
+        return secondMin == Integer.MAX_VALUE ? -1 : secondMin;
     }
 
-    private void dfs(TreeNode node){
-        if(node.val!=minVal){
+    private void dfs(TreeNode node) {
+        if (node.val != minVal) {
             secondMin = Math.min(secondMin, node.val);
         }
-        if(node.left!=null) dfs(node.left);
-        if(node.right!=null) dfs(node.right);
+        if (node.left != null) {
+            dfs(node.left);
+        }
+        if (node.right != null) {
+            dfs(node.right);
+        }
     }
 }

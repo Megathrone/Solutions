@@ -10,8 +10,9 @@ public class WordPattern {
         Map<String, Integer> mapS = new HashMap<>();
 
         String[] nStr = str.split(" ");
-        if (pattern.length() != nStr.length)
+        if (pattern.length() != nStr.length) {
             return false;
+        }
         for (Integer i = 0; i < nStr.length; i++) {
 
             if (mapP.put(pattern.charAt(i), i) != mapS.put(nStr[i], i)) {

@@ -1,8 +1,7 @@
 import java.util.Arrays;
 
 /**
- * LargestNumberLeastTwiceofOthers
- * 本质上是招数组第二个大的题
+ * LargestNumberLeastTwiceofOthers 本质上是招数组第二个大的题
  */
 public class LargestNumberLeastTwiceofOthers {
 
@@ -35,7 +34,7 @@ public class LargestNumberLeastTwiceofOthers {
 
     public static void main(String[] args) {
         LargestNumberLeastTwiceofOthers foo = new LargestNumberLeastTwiceofOthers();
-        int[] nums = { 1 };
+        int[] nums = {1};
         System.out.println(foo.dominantIndex(nums));
     }
 }

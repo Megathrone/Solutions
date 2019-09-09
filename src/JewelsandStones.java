@@ -11,8 +11,9 @@ public class JewelsandStones {
             mapJ.put(ch, mapJ.containsKey(ch) ? mapJ.get(ch) + 1 : 1);
         }
         for (char ch : S.toCharArray()) {
-            if (mapJ.containsKey(ch))
+            if (mapJ.containsKey(ch)) {
                 ans++;
+            }
         }
         return ans;
     }

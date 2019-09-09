@@ -4,8 +4,9 @@
 public class BalancedBinaryTree {
 
     public boolean isBalanced(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return true;
+        }
 
         int leftDepth = dfs(root.left);
         int rightDepth = def(root.right);
@@ -19,10 +20,11 @@ public class BalancedBinaryTree {
     }
 
     private int dfs(TreeNode node) {
-        if (node == null)
+        if (node == null) {
             return 0;
-        else
-            return Math.max(dfs(node.left), dfs(node.right))+1;
+        } else {
+            return Math.max(dfs(node.left), dfs(node.right)) + 1;
+        }
 
     }
 }

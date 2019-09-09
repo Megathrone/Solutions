@@ -30,7 +30,7 @@ public class TopKFrequentElements {
 
         Map<Integer, Integer> frequentMap = new HashMap<>();
         List<Integer>[] reverse = new ArrayList[nums.length + 1];
-        
+
         for (int num : nums) {
             frequentMap.put(num, frequentMap.getOrDefault(num, 0) + 1);
         }
@@ -56,7 +56,7 @@ public class TopKFrequentElements {
 
     public static void main(String[] args) {
         TopKFrequentElements foo = new TopKFrequentElements();
-        int[] a = { 1, 2 };
+        int[] a = {1, 2};
 
         System.out.println(foo.topKFrequent(a, 2));
     }

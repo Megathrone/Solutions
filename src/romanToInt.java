@@ -30,13 +30,27 @@ public class romanToInt {
         int count = 0;
 
         for (; count <= s.length() - 1; count++) {
-            if (c[count] == 'M') sum += 1000;
-            if (c[count] == 'D') sum += 500;
-            if (c[count] == 'C') sum += 100;
-            if (c[count] == 'L') sum += 50;
-            if (c[count] == 'X') sum += 10;
-            if (c[count] == 'V') sum += 5;
-            if (c[count] == 'I') sum += 1;
+            if (c[count] == 'M') {
+                sum += 1000;
+            }
+            if (c[count] == 'D') {
+                sum += 500;
+            }
+            if (c[count] == 'C') {
+                sum += 100;
+            }
+            if (c[count] == 'L') {
+                sum += 50;
+            }
+            if (c[count] == 'X') {
+                sum += 10;
+            }
+            if (c[count] == 'V') {
+                sum += 5;
+            }
+            if (c[count] == 'I') {
+                sum += 1;
+            }
 
         }
 

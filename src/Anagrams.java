@@ -3,11 +3,13 @@ import java.util.*;
 public class Anagrams {
 
 
-    public List<Integer> findAnagrams(String s, String t){
+    public List<Integer> findAnagrams(String s, String t) {
         List<Integer> result = new LinkedList<>();
-        if(t.length()> s.length()) return result;
+        if (t.length() > s.length()) {
+            return result;
+        }
         Map<Character, Integer> map = new HashMap<>();
-        for(char c : t.toCharArray()){
+        for (char c : t.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
         int counter = map.size();
@@ -16,27 +18,28 @@ public class Anagrams {
         int head = 0;
         int len = Integer.MAX_VALUE;
 
-
-        while(end < s.length()){
+        while (end < s.length()) {
             char c = s.charAt(end);
-            if( map.containsKey(c) ){
-                map.put(c, map.get(c)-1);
-                if(map.get(c) == 0) counter--;
+            if (map.containsKey(c)) {
+                map.put(c, map.get(c) - 1);
+                if (map.get(c) == 0) {
+                    counter--;
+                }
             }
             end++;
             System.out.println(end);
 
-            while(counter == 0){
+            while (counter == 0) {
                 System.out.println("-----");
                 char tempc = s.charAt(begin);
-                if(map.containsKey(tempc)){
+                if (map.containsKey(tempc)) {
                     map.put(tempc, map.get(tempc) + 1);
-                    if(map.get(tempc) > 0){
+                    if (map.get(tempc) > 0) {
                         counter++;
                     }
                 }
-                System.out.println(end+""+begin);
-                if(end-begin == t.length()){
+                System.out.println(end + "" + begin);
+                if (end - begin == t.length()) {
                     result.add(begin);
                 }
                 begin++;
@@ -46,9 +49,9 @@ public class Anagrams {
         return result;
     }
 
-    public static void main(String[] argv){
-        String s= "abed";
+    public static void main(String[] argv) {
+        String s = "abed";
         String p = "abd";
-        System.out.println((new Anagrams()).findAnagrams(s,p));
+        System.out.println((new Anagrams()).findAnagrams(s, p));
     }
 }

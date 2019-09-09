@@ -9,6 +9,7 @@ import java.util.Map;
  * Created by Iruka on 2017/5/27.
  */
 public class IntersectionOfTwoArraysTwo {
+
     public int[] intersect(int[] nums1, int[] nums2) {
         // List<Integer> intersec = new ArrayList<>();
         // Arrays.sort(nums1);
@@ -33,19 +34,20 @@ public class IntersectionOfTwoArraysTwo {
         Map<Integer, Integer> map = new HashMap<>();
         List<Integer> res = new ArrayList<>();
         for (int num : nums1) {
-            if (map.containsKey(num))
+            if (map.containsKey(num)) {
                 map.put(num, map.get(num) + 1);
-            else
+            } else {
                 map.put(num, 1);
+            }
         }
         for (int num : nums2) {
-            if(map.containsKey(num) && map.get(num)>0) {
+            if (map.containsKey(num) && map.get(num) > 0) {
                 res.add(num);
-                map.put(num, map.get(num)-1);
+                map.put(num, map.get(num) - 1);
             }
         }
         int[] ans = new int[res.size()];
-        int i=0;
+        int i = 0;
         for (int num : res) {
             ans[i++] = num;
         }
@@ -53,8 +55,8 @@ public class IntersectionOfTwoArraysTwo {
     }
 
     public static void main(String[] args) {
-        int[] n1 = new int[] { 1, 2, 2, 3, 4, 5, 6 };
-        int[] n2 = new int[] { 2, 2, 3 };
+        int[] n1 = new int[]{1, 2, 2, 3, 4, 5, 6};
+        int[] n2 = new int[]{2, 2, 3};
         System.out.println(Arrays.toString(new IntersectionOfTwoArraysTwo().intersect(n1, n2)));
         System.out.println(n1);
     }

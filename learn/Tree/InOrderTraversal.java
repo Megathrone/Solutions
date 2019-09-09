@@ -4,9 +4,7 @@ import java.util.Stack;
 import javax.swing.tree.TreeNode;
 
 /**
- * InOrderTraversal
- * 遍历到最左边是第一个要输出的子节点，也就是说当p没有left的时候的那个结点是第一个
- * 
+ * InOrderTraversal 遍历到最左边是第一个要输出的子节点，也就是说当p没有left的时候的那个结点是第一个
  */
 public class InOrderTraversal {
 
@@ -14,8 +12,8 @@ public class InOrderTraversal {
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> s = new Stack<>();
         TreeNode p = root;
-        while (p!=null || !s.isEmpty()) {
-            while (p!=null) {
+        while (p != null || !s.isEmpty()) {
+            while (p != null) {
                 s.push(p);
                 p = p.left;
             }

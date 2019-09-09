@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Test {
+
     public int firstUniqChar(String s) {
         Map<Character, Integer> map = new LinkedHashMap<>();
 
@@ -10,14 +11,17 @@ public class Test {
 
                 map.put(word, map.get(word) + 1);
 
-            } else {{}
+            } else {
+                {
+                }
                 map.put(word, 1);
             }
         }
         System.out.println(map);
         for (char word : map.keySet()) {
-            if (map.get(word) == 1)
+            if (map.get(word) == 1) {
                 return s.indexOf(word);
+            }
         }
         return -1;
     }

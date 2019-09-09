@@ -3,9 +3,8 @@ import java.util.Set;
 
 /**
  * ContainsDuplicateTwo
- * 
- * 解题的关键是要maintain一个window，根据题目给的k值维护一个相同大小的窗口，
- * 相当于固定游标卡尺在array移动
+ *
+ * 解题的关键是要maintain一个window，根据题目给的k值维护一个相同大小的窗口， 相当于固定游标卡尺在array移动
  */
 public class ContainsDuplicateTwo {
 

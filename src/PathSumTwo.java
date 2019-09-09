@@ -2,9 +2,8 @@ import java.util.*;
 
 /**
  * PathSumTwo
- * 
- * 这个事back tracking的技巧，每一次遍历到叶子结点后都删除最后一个结点
- * 也是一个dfs
+ *
+ * 这个事back tracking的技巧，每一次遍历到叶子结点后都删除最后一个结点 也是一个dfs
  */
 public class PathSumTwo {
 
@@ -16,8 +15,9 @@ public class PathSumTwo {
     }
 
     public void pathSum(TreeNode node, int sum, List<Integer> subList, List<List<Integer>> res) {
-        if (node == null)
+        if (node == null) {
             return;
+        }
 
         subList.add(node.val);
         if (node.left == null && node.right == null && sum == node.val) {

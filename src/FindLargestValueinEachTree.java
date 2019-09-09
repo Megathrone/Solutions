@@ -4,9 +4,7 @@ import java.util.*;
 import javax.swing.tree.TreeNode;
 
 /**
- * FindLargestValueinEachTree
- * 找到每一层之中最大的值，这一是个最经典的BFS题，直接常规模板BFS秒了
- * 就是一个心得。。。记得用Math库，不要自己写了 = =
+ * FindLargestValueinEachTree 找到每一层之中最大的值，这一是个最经典的BFS题，直接常规模板BFS秒了 就是一个心得。。。记得用Math库，不要自己写了 = =
  */
 public class FindLargestValueinEachTree {
 
@@ -14,8 +12,9 @@ public class FindLargestValueinEachTree {
         Queue<TreeNode> q = new LinkedList<>();
         List<Integer> res = new ArrayList<>();
 
-        if (root == null)
+        if (root == null) {
             return res;
+        }
         q.offer(root);
 
         while (!q.isEmpty()) {
@@ -26,10 +25,12 @@ public class FindLargestValueinEachTree {
             for (int i = 0; i < levelNum; i++) {
                 TreeNode p = q.poll();
 
-                if (p.left != null)
+                if (p.left != null) {
                     q.offer(p.left);
-                if (p.right != null)
+                }
+                if (p.right != null) {
                     q.offer(p.right);
+                }
                 max = Math.max(p.val, max);
             }
             res.add(max);

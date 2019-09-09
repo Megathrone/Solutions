@@ -10,8 +10,9 @@ public class QuickSorting {
     }
 
     private static void sort(int[] a, int lo, int hi) {
-        if (hi <= lo)
+        if (hi <= lo) {
             return;
+        }
         int j = partition(a, lo, hi);
         sort(a, lo, j - 1);
         sort(a, j + 1, hi);
@@ -23,16 +24,19 @@ public class QuickSorting {
 
         while (true) {
             while (less(a[++i], a[lo])) {
-                if (i == hi)
+                if (i == hi) {
                     break;
+                }
             }
             while (less(a[lo], a[--j])) {
-                if (j == lo)
+                if (j == lo) {
                     break;
+                }
             }
 
-            if (i >= j)
+            if (i >= j) {
                 break;
+            }
             exch(a, i, j);
         }
         exch(a, lo, j);
@@ -51,14 +55,15 @@ public class QuickSorting {
 
     public static boolean isSorted(int[] a) {
         for (int i = 1; i < a.length; i++) {
-            if (less(a[i], a[i - 1]))
+            if (less(a[i], a[i - 1])) {
                 return false;
+            }
         }
         return true;
     }
 
     public static void main(String[] args) {
-        int[] a = { 4, 5, 6, 1, 2, 4, 5, 7, 1, 13, 4 };
+        int[] a = {4, 5, 6, 1, 2, 4, 5, 7, 1, 13, 4};
         sort(a);
         System.out.println(isSorted(a));
         System.out.println(Arrays.toString(a));

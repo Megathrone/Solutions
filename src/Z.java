@@ -1,5 +1,6 @@
 
 class X {
+
     Y y = new Y();
 
     public X() {
@@ -8,12 +9,14 @@ class X {
 }
 
 class Y {
+
     public Y() {
         System.out.print("Y");
     }
 }
 
 public class Z extends X {
+
     Y y = new Y();
 
     public Z() {

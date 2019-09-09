@@ -2,6 +2,7 @@
  * RepeatedSubstringPattern
  */
 public class RepeatedSubstringPattern {
+
     public boolean repeatedSubstringPattern(String s) {
         int len = s.length();
         for (int i = len / 2; i > 0; i--) {
@@ -12,8 +13,9 @@ public class RepeatedSubstringPattern {
                 for (int k = 0; k < times; k++) {
                     sb.append(str);
                 }
-                if (sb.toString().equals(s))
+                if (sb.toString().equals(s)) {
                     return true;
+                }
             }
         }
         return false;
